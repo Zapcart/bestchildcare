@@ -861,6 +861,18 @@ section:first-of-type {
     font-weight: 600;
 }
 
+/* Ad Container */
+.ad-container {
+    padding: 2rem 0;
+    background: var(--gray-50);
+    margin: 2rem 0;
+}
+
+.ad-container .container {
+    text-align: center;
+    min-height: 100px;
+}
+
 /* Footer */
 .footer {
     background: var(--gray-900);
