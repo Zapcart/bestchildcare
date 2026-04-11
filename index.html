@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HelpCharityFoundation — Transparent Donations That Change Lives</title>
+  <meta name="description" content="HelpCharityFoundation connects you to verified campaigns. See who you help, why it matters, and the impact of every rupee. Donate products or money with full transparency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="logo-mark loader-logo">H</span>
+      <p class="loader-text">HelpCharityFoundation</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="HelpCharityFoundation home">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">HelpCharity<span>Foundation</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#campaigns">Campaigns</a></li>
+          <li><a href="#donate-products">Donate products</a></li>
+          <li><a href="#donate-money">Donate money</a></li>
+          <li><a href="#transformations">Transformations</a></li>
+          <li><a href="#proof">Proof</a></li>
+          <li><a href="#trust">Trust</a></li>
+        </ul>
+      </nav>
+      <a href="#donate-money" class="btn btn-header">Donate</a>
+      <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Verified campaigns · Full transparency</p>
+        <h1 class="hero-title">Know exactly <em>who</em> you help—and <em>what</em> your gift does</h1>
+        <p class="hero-lead">HelpCharityFoundation shows you the real people behind each campaign, why help is urgent, and how donations turn into food, education, shelter, and safety.</p>
+        <div class="hero-actions">
+          <a href="#donate-money" class="btn btn-primary btn-lg">Donate now</a>
+          <a href="#campaigns" class="btn btn-outline btn-lg">View campaigns</a>
+        </div>
+        <ul class="hero-trust" role="list">
+          <li>Safe donations</li>
+          <li>Verified campaigns</li>
+          <li>Impact you can track</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="live-feed" id="live-feed" aria-live="polite">
+      <span class="live-feed-dot" aria-hidden="true"></span>
+      <span class="live-feed-text" id="live-feed-text">₹500 donated just now from Mumbai</span>
+    </div>
+
+    <section class="section section-campaigns" id="campaigns">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Featured campaigns</h2>
+          <p class="section-desc">Every campaign explains who you are helping, why timing matters, and the concrete impact of your support.</p>
+        </header>
+
+        <article class="campaign-card" data-campaign="1">
+          <span class="urgent-badge">🚨 Urgent Case</span>
+          <div class="campaign-gallery">
+            <div class="campaign-slides">
+              <img src="images/prasad1.png" alt="Campaign: Prasad and children — photo 1" class="campaign-slide active" width="800" height="520" loading="lazy">
+              <img src="images/prasad2.png" alt="Campaign: Prasad and children — photo 2" class="campaign-slide" width="800" height="520" loading="lazy">
+              <img src="images/prasad3.png" alt="Campaign: Prasad and children — photo 3" class="campaign-slide" width="800" height="520" loading="lazy">
+            </div>
+            <button type="button" class="gallery-nav prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-nav next" aria-label="Next image">›</button>
+            <div class="gallery-dots" role="tablist" aria-label="Image selection"></div>
+          </div>
+          <div class="campaign-body">
+            <h3 class="campaign-title">Help Prasad Raise 45 Children Alone</h3>
+            <ul class="impact-list">
+              <li><strong>Who you're helping:</strong> Prasad, an auto driver caring for 45 children.</li>
+              <li><strong>Why urgent:</strong> Rising cost of food, healthcare, and shelter.</li>
+              <li><strong>Impact:</strong> Supports food, education, hygiene, and safety.</li>
+            </ul>
+            <div class="campaign-actions">
+              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="https://wa.me/?text=Help%20Prasad%20raise%2045%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="campaign-card campaign-card--alt" data-campaign="2">
+          <span class="urgent-badge">🚨 Urgent Case</span>
+          <div class="campaign-gallery">
+            <div class="campaign-slides">
+              <img src="images/emergency1.png" alt="Emergency relief — photo 1" class="campaign-slide active" width="800" height="520" loading="lazy">
+              <img src="images/emergency2.png" alt="Emergency relief — photo 2" class="campaign-slide" width="800" height="520" loading="lazy">
+              <img src="images/emergency3.png" alt="Emergency relief — photo 3" class="campaign-slide" width="800" height="520" loading="lazy">
+            </div>
+            <button type="button" class="gallery-nav prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-nav next" aria-label="Next image">›</button>
+            <div class="gallery-dots" role="tablist" aria-label="Image selection"></div>
+          </div>
+          <div class="campaign-body">
+            <h3 class="campaign-title">Emergency Relief for Families in Crisis</h3>
+            <ul class="impact-list">
+              <li><strong>Who you're helping:</strong> Families affected by crisis.</li>
+              <li><strong>Why urgent:</strong> Immediate food, shelter, and medical help needed.</li>
+              <li><strong>Impact:</strong> Provides survival kits and emergency support.</li>
+            </ul>
+            <div class="campaign-actions">
+              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="https://wa.me/?text=Help%20Prasad%20raise%2045%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="campaign-card" data-campaign="3">
+          <div class="campaign-gallery">
+            <div class="campaign-slides">
+              <img src="images/support1.png" alt="Food and education support — photo 1" class="campaign-slide active" width="800" height="520" loading="lazy">
+              <img src="images/support2.png" alt="Food and education support — photo 2" class="campaign-slide" width="800" height="520" loading="lazy">
+              <img src="images/support3.png" alt="Food and education support — photo 3" class="campaign-slide" width="800" height="520" loading="lazy">
+            </div>
+            <button type="button" class="gallery-nav prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-nav next" aria-label="Next image">›</button>
+            <div class="gallery-dots" role="tablist" aria-label="Image selection"></div>
+          </div>
+          <div class="campaign-body">
+            <h3 class="campaign-title">Food &amp; Education Support for Poor Children</h3>
+            <ul class="impact-list">
+              <li><strong>Who you're helping:</strong> Children from low-income families.</li>
+              <li><strong>Why urgent:</strong> Lack of food and school access.</li>
+              <li><strong>Impact:</strong> Provides meals, school kits, and education support.</li>
+            </ul>
+            <div class="campaign-actions">
+              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="https://wa.me/?text=Food%20%26%20Education%20support%20for%20poor%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-video" id="video">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">See the Impact of Your Donation</h2>
+          <p class="section-desc">Watch how your contribution transforms lives — every rupee reaches those who need it most.</p>
+        </header>
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="images/video-poster.png">
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-trust-badges">
+      <div class="container">
+        <div class="trust-badges-grid">
+          <div class="trust-badge">
+            <span class="trust-badge-icon" aria-hidden="true">🛡️</span>
+            <h3 class="trust-badge-title">100% Safe Donations</h3>
+            <p class="trust-badge-desc">Your payment is secured with bank-grade encryption and verified gateways.</p>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon" aria-hidden="true">✅</span>
+            <h3 class="trust-badge-title">Verified Campaigns</h3>
+            <p class="trust-badge-desc">Every campaign is personally verified with documents, photos, and field visits.</p>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon" aria-hidden="true">📊</span>
+            <h3 class="trust-badge-title">Full Transparency</h3>
+            <p class="trust-badge-desc">Track every rupee — see receipts, utilization reports, and impact updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-desc">Everything you need to know before donating.</p>
+        </header>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-q">Is my donation safe?</summary>
+            <div class="faq-a">
+              <p>Yes. All payments are processed through RBI-compliant, bank-grade encrypted gateways. Your financial data is never stored on our servers. We use the same security standards as leading banks.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-q">Where does the money go?</summary>
+            <div class="faq-a">
+              <p>Every rupee goes directly to the campaign you choose. We publish utilization reports with receipts, photos, and field updates so you can see exactly how your donation was used.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-q">Will I get updates?</summary>
+            <div class="faq-a">
+              <p>Absolutely. Once you donate, you receive regular impact updates via email — including progress photos, milestone reports, and thank-you messages from the beneficiaries.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-q">Can I donate products instead of money?</summary>
+            <div class="faq-a">
+              <p>Yes! Our Donate Products section lets you send verified kits (groceries, hygiene, school supplies, meals) directly to the programs that need them.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-q">How are campaigns verified?</summary>
+            <div class="faq-a">
+              <p>Each campaign undergoes a multi-step verification: identity checks, document validation, field visits, and ongoing monitoring. We share all proof in our Documents section.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-products" id="donate-products">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Donate products</h2>
+          <p class="section-desc">Ship essentials directly to verified programs. Each kit is priced clearly; progress shows community support toward this month’s goal.</p>
+        </header>
+
+        <div class="products-layout">
+          <div class="product-grid">
+            <article class="product-card" data-product-id="groceries" data-price="899">
+              <div class="product-image-wrap">
+                <img src="images/groceries-kit.png" alt="Groceries kit" width="400" height="280" loading="lazy">
+              </div>
+              <h3 class="product-name">Groceries Kit</h3>
+              <p class="product-price">₹899 <span class="per">per kit</span></p>
+              <div class="progress-block">
+                <div class="progress-label"><span>Funded this month</span><span class="progress-pct" data-progress-for="groceries">68%</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"><span style="width:68%"></span></div>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart">Add</button>
+            </article>
+
+            <article class="product-card" data-product-id="hygiene" data-price="649">
+              <div class="product-image-wrap">
+                <img src="images/hygiene-kit.png" alt="Hygiene kit" width="400" height="280" loading="lazy">
+              </div>
+              <h3 class="product-name">Hygiene Kit</h3>
+              <p class="product-price">₹649 <span class="per">per kit</span></p>
+              <div class="progress-block">
+                <div class="progress-label"><span>Funded this month</span><span class="progress-pct" data-progress-for="hygiene">54%</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100"><span style="width:54%"></span></div>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart">Add</button>
+            </article>
+
+            <article class="product-card" data-product-id="school" data-price="1199">
+              <div class="product-image-wrap">
+                <img src="images/school-kit.png" alt="School kit" width="400" height="280" loading="lazy">
+              </div>
+              <h3 class="product-name">School Kit</h3>
+              <p class="product-price">₹1,199 <span class="per">per kit</span></p>
+              <div class="progress-block">
+                <div class="progress-label"><span>Funded this month</span><span class="progress-pct" data-progress-for="school">72%</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><span style="width:72%"></span></div>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart">Add</button>
+            </article>
+
+            <article class="product-card" data-product-id="meal" data-price="399">
+              <div class="product-image-wrap">
+                <img src="images/meal-kit.png" alt="Meal kit" width="400" height="280" loading="lazy">
+              </div>
+              <h3 class="product-name">Meal Kit</h3>
+              <p class="product-price">₹399 <span class="per">per kit</span></p>
+              <div class="progress-block">
+                <div class="progress-label"><span>Funded this month</span><span class="progress-pct" data-progress-for="meal">81%</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"><span style="width:81%"></span></div>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart">Add</button>
+            </article>
+          </div>
+
+          <aside class="cart-panel" aria-labelledby="cart-heading">
+            <h2 id="cart-heading" class="cart-title">Your cart</h2>
+            <p class="cart-empty" id="cart-empty">No kits yet. Tap Add on any product.</p>
+            <ul class="cart-lines" id="cart-lines" hidden></ul>
+            <div class="cart-footer" id="cart-footer" hidden>
+              <div class="cart-total-row">
+                <span>Estimated total</span>
+                <strong id="cart-total">₹0</strong>
+              </div>
+              <button type="button" class="btn btn-primary btn-block" id="cart-checkout">Proceed with kits</button>
+              <button type="button" class="btn btn-ghost btn-block" id="cart-clear">Clear cart</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-money" id="donate-money">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <h2 class="section-title">Donate money</h2>
+          <p class="section-desc">Choose a preset amount or enter your own. Your gift is routed to verified program costs and reported transparently.</p>
+        </header>
+        <div class="money-panel">
+          <div class="amount-grid" role="group" aria-label="Donation amount">
+            <button type="button" class="amount-btn selected" data-amount="501">₹501</button>
+            <button type="button" class="amount-btn" data-amount="1000">₹1000</button>
+            <button type="button" class="amount-btn" data-amount="5000">₹5000</button>
+            <label class="amount-custom">
+              <span class="sr-only">Custom amount in rupees</span>
+              <span class="currency-prefix">₹</span>
+              <input type="number" id="custom-amount" min="1" step="1" placeholder="Custom" inputmode="numeric" autocomplete="off">
+            </label>
+          </div>
+          <p class="money-summary">Selected: <strong id="selected-amount-label">₹501</strong></p>
+          <button type="button" class="btn btn-donate-mega" id="btn-donate-money">Donate</button>
+          <p class="money-note">You will confirm details on the next step. Minimum suggested donation ₹101.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-transform" id="transformations">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Before &amp; after</h2>
+          <p class="section-desc">Real outcomes from sustained support—nutrition, schooling, and dignity restored.</p>
+        </header>
+        <div class="compare-grid">
+          <div class="compare-row">
+            <figure class="compare-cell compare-before">
+              <img src="images/before1.png" alt="Before support — story 1" width="600" height="400" loading="lazy">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure class="compare-cell compare-after">
+              <img src="images/after1.png" alt="After support — story 1" width="600" height="400" loading="lazy">
+              <figcaption>After</figcaption>
+            </figure>
+          </div>
+          <div class="compare-row">
+            <figure class="compare-cell compare-before">
+              <img src="images/before2.png" alt="Before support — story 2" width="600" height="400" loading="lazy">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure class="compare-cell compare-after">
+              <img src="images/after2.png" alt="After support — story 2" width="600" height="400" loading="lazy">
+              <figcaption>After</figcaption>
+            </figure>
+          </div>
+          <div class="compare-row">
+            <figure class="compare-cell compare-before">
+              <img src="images/before3.png" alt="Before support — story 3" width="600" height="400" loading="lazy">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure class="compare-cell compare-after">
+              <img src="images/after3.png" alt="After support — story 3" width="600" height="400" loading="lazy">
+              <figcaption>After</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-proof" id="proof">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Documents &amp; proof</h2>
+          <p class="section-desc">Registration letters, utilization summaries, and field reports we share with our donor community.</p>
+        </header>
+        <div class="doc-gallery">
+          <a href="images/documents1.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents1.png" alt="Verified document 1" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents2.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents2.png" alt="Verified document 2" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents3.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents3.png" alt="Verified document 3" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents4.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents4.png" alt="Verified document 4" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents5.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents5.png" alt="Verified document 5" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents6.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents6.png" alt="Verified document 6" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents7.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents7.png" alt="Verified document 7" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents8.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents8.png" alt="Verified document 8" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents9.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents9.png" alt="Verified document 9" width="320" height="240" loading="lazy"></a>
+          <a href="images/documents10.png" class="doc-thumb" target="_blank" rel="noopener noreferrer"><img src="images/documents10.png" alt="Verified document 10" width="320" height="240" loading="lazy"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-trust" id="trust">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Trust &amp; transparency</h2>
+          <p class="section-desc">We publish donor milestones and keep every campaign tied to clear who / why / impact.</p>
+        </header>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p class="stat-label">Top donor</p>
+            <p class="stat-name">Ananya R.</p>
+            <p class="stat-meta">₹50,000 · Mumbai</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Recent donor</p>
+            <p class="stat-name">Karthik S.</p>
+            <p class="stat-meta">₹2,500 · 2 hours ago</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">First donor</p>
+            <p class="stat-name">Meera P.</p>
+            <p class="stat-meta">₹501 · Day 1 of campaign</p>
+          </div>
+        </div>
+        <ul class="trust-pills" role="list">
+          <li>Safe donations</li>
+          <li>Verified campaigns</li>
+          <li>Full transparency</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">H</span>
+        <span>HelpCharityFoundation</span>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> HelpCharityFoundation. Impact-first fundraising for children and families in need.</p>
+      <a href="mailto:hello@helpcharityfoundation.org" class="footer-link">hello@helpcharityfoundation.org</a>
+    </div>
+  </footer>
+
+  <a href="#donate-money" class="sticky-donate" id="sticky-donate">Donate</a>
+
+  <div class="mobile-sticky-bar">
+    <a href="#donate-money" class="btn btn-primary btn-mobile-donate">Donate Now</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
