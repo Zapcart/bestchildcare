@@ -1112,31 +1112,34 @@ a.btn-header:hover {
   text-align: center;
 }
 
-.loader-logo {
-  width: 72px;
-  height: 72px;
-  font-size: 2rem;
-  margin: 0 auto 1rem;
-  animation: loaderPulse 1.2s var(--ease) infinite;
+.loader-logo-img {
+  width: 180px;
+  height: auto;
+  max-width: 80vw;
+  animation: loaderLogoAnimation 2.5s var(--ease) infinite;
 }
 
-.loader-text {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--black);
-  margin: 0;
-  animation: loaderFade 1.5s var(--ease) infinite;
-}
-
-@keyframes loaderPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.12); opacity: 0.85; }
-}
-
-@keyframes loaderFade {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+@keyframes loaderLogoAnimation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
 /* Live donation feed */
@@ -1763,6 +1766,11 @@ a.btn-header:hover {
 
   .modal-subtitle {
     font-size: 1.125rem;
+  }
+
+  .loader-logo-img {
+    width: 140px;
+    max-width: 70vw;
   }
 }
 
