@@ -50,6 +50,49 @@
     });
   });
 
+  /* Campaign modal */
+  var knowMoreBtn = document.getElementById("btn-know-more");
+  var campaignModal = document.getElementById("campaign-modal");
+  var modalClose = document.getElementById("modal-close");
+  var modalBackdrop = document.getElementById("modal-backdrop");
+  var modalDonateBtn = document.querySelector(".modal-donate-btn");
+
+  function openModal() {
+    if (campaignModal) {
+      campaignModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeModal() {
+    if (campaignModal) {
+      campaignModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+
+  if (knowMoreBtn) {
+    knowMoreBtn.addEventListener("click", openModal);
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener("click", closeModal);
+  }
+
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener("click", closeModal);
+  }
+
+  if (modalDonateBtn) {
+    modalDonateBtn.addEventListener("click", closeModal);
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && campaignModal && campaignModal.getAttribute("aria-hidden") === "false") {
+      closeModal();
+    }
+  });
+
   var header = document.querySelector(".site-header");
   var nav = document.querySelector(".nav");
   var menuToggle = document.querySelector(".menu-toggle");

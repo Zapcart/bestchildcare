@@ -1393,6 +1393,242 @@ a.btn-header:hover {
   text-align: center;
 }
 
+/* Featured campaign section */
+.section-featured-campaign {
+  background: var(--white);
+  padding: 4rem 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.featured-campaign-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.featured-campaign-video {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-campaign-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.urgent-badge--large {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.4);
+  animation: urgentPulse 2s ease-in-out infinite;
+}
+
+.featured-campaign-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured-campaign-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.featured-campaign-summary {
+  font-size: 1.0625rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.featured-campaign-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Campaign modal */
+.campaign-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s var(--ease), visibility 0.3s;
+}
+
+.campaign-modal[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  animation: modalSlideIn 0.3s var(--ease);
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s var(--ease), color 0.2s;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--gray-200);
+  color: var(--black);
+}
+
+.modal-body {
+  padding: 2.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 2rem;
+  line-height: 1.3;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.modal-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--red);
+  margin: 0 0 0.75rem;
+}
+
+.modal-text {
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-list li {
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+
+.modal-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.modal-appeal {
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-left: 4px solid var(--red);
+}
+
+.appeal-text {
+  font-size: 1.0625rem;
+  color: var(--gray-900);
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.appeal-text:last-child {
+  margin-bottom: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.modal-donate-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .nav {
@@ -1485,6 +1721,48 @@ a.btn-header:hover {
   .campaign-actions .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .section-featured-campaign {
+    padding: 3rem 24px;
+  }
+
+  .featured-campaign-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .featured-campaign-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-campaign-actions {
+    flex-direction: column;
+  }
+
+  .featured-campaign-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .campaign-modal {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.375rem;
+  }
+
+  .modal-subtitle {
+    font-size: 1.125rem;
   }
 }
 

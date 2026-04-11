@@ -66,6 +66,28 @@
       <span class="live-feed-text" id="live-feed-text">₹500 donated just now from Mumbai</span>
     </div>
 
+    <section class="section section-featured-campaign" id="featured-campaign">
+      <div class="container">
+        <div class="featured-campaign-layout">
+          <div class="featured-campaign-video">
+            <video autoplay muted loop playsinline>
+              <source src="video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <span class="urgent-badge urgent-badge--large">🚨 Urgent Case</span>
+          </div>
+          <div class="featured-campaign-content">
+            <h2 class="featured-campaign-title">A Father's Hands, A Child's Breath – Purav's Fight for Life</h2>
+            <p class="featured-campaign-summary">Master Purav, just 3.5 years old, is fighting for every breath at DMICC Hospital, Jaipur. His father, a daily wage labourer earning ₹12,000/month, has already spent ₹5.5 lakh borrowed from friends. No savings left, no assets to sell – only hope.</p>
+            <div class="featured-campaign-actions">
+              <a href="#donate-money" class="btn btn-primary btn-lg">Donate Now</a>
+              <button type="button" class="btn btn-outline btn-lg" id="btn-know-more">Know More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-campaigns" id="campaigns">
       <div class="container">
         <header class="section-head">
@@ -160,7 +182,7 @@
         </header>
         <div class="video-wrap">
           <video controls preload="metadata" poster="images/video-poster.png">
-            <source src="video1.mp4" type="video/mp4">
+            <source src="video/seevideo1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -442,6 +464,42 @@
 
   <div class="mobile-sticky-bar">
     <a href="#donate-money" class="btn btn-primary btn-mobile-donate">Donate Now</a>
+  </div>
+
+  <div class="campaign-modal" id="campaign-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      <div class="modal-body">
+        <h2 id="modal-title" class="modal-title">A Father's Hands, A Child's Breath – Purav's Fight for Life</h2>
+        <div class="modal-section">
+          <h3 class="modal-subtitle">The Story</h3>
+          <p class="modal-text">Sikar ke Ramgarh Shekhawati gaon mein rehne wala ek chhota sa parivaar aaj ek hospital ke kamre mein apni zindagi ki sabse badi ladayi lad raha hai.</p>
+          <p class="modal-text">Master Purav, jiski umar sirf 3.5 saal hai, usse aaj khelna-koodna chahiye tha, lekin woh DMICC Hospital, Jaipur ke PICU mein apni har saans ke liye lad raha hai.</p>
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-subtitle">Medical Condition</h3>
+          <ul class="modal-list">
+            <li>Pyogenic Liver Abscess</li>
+            <li>Right Lung Collapse</li>
+            <li>Respiratory Failure</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h3 class="modal-subtitle">Family Condition</h3>
+          <p class="modal-text">Purav ke pita Mr. Neeranjan ek daily wage labourer hain jo ₹12,000–13,000 mahina kama paate hain.</p>
+          <p class="modal-text"><strong>Already Spent:</strong> ₹5.5 lakh borrowed from friends and relatives</p>
+          <p class="modal-text"><strong>Current Situation:</strong> No savings left, no assets to sell</p>
+        </div>
+        <div class="modal-appeal">
+          <p class="appeal-text">"Aapki ek chhoti si madad Purav ko ek nayi zindagi de sakti hai."</p>
+          <p class="appeal-text">"Please help Master Purav fight this battle. One child. One life. One hope."</p>
+        </div>
+        <div class="modal-actions">
+          <a href="#donate-money" class="btn btn-primary btn-lg modal-donate-btn">Donate Now</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
