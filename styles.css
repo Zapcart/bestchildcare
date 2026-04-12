@@ -1396,6 +1396,135 @@ a.btn-header:hover {
   text-align: center;
 }
 
+/* Trust message below donate buttons */
+.trust-message {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  margin-top: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Donation popup */
+.donate-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s var(--ease), visibility 0.3s;
+}
+
+.donate-popup[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.popup-content {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 100%;
+  box-shadow: var(--shadow-xl);
+  animation: popupSlideIn 0.3s var(--ease);
+}
+
+@keyframes popupSlideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-body {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.popup-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: popupHeartbeat 1.2s ease-in-out infinite;
+}
+
+@keyframes popupHeartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.popup-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.popup-message {
+  font-size: 1.0625rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.popup-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.trust-badge-small {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  background: var(--gray-100);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.popup-continue-btn {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.popup-cancel-btn {
+  padding: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+}
+
+.popup-cancel-btn:hover {
+  color: var(--black);
+  background: var(--gray-100);
+}
+
 /* Featured campaign section */
 .section-featured-campaign {
   background: var(--white);

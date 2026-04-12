@@ -93,6 +93,48 @@
     }
   });
 
+  /* Donation popup */
+  var donatePopup = document.getElementById("donate-popup");
+  var popupBackdrop = document.getElementById("popup-backdrop");
+  var popupCancel = document.getElementById("popup-cancel");
+  var donateTriggers = document.querySelectorAll(".donate-trigger");
+  var popupContinueBtn = document.querySelector(".popup-continue-btn");
+
+  function openDonatePopup() {
+    if (donatePopup) {
+      donatePopup.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeDonatePopup() {
+    if (donatePopup) {
+      donatePopup.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+
+  donateTriggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      openDonatePopup();
+    });
+  });
+
+  if (popupCancel) {
+    popupCancel.addEventListener("click", closeDonatePopup);
+  }
+
+  if (popupBackdrop) {
+    popupBackdrop.addEventListener("click", closeDonatePopup);
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && donatePopup && donatePopup.getAttribute("aria-hidden") === "false") {
+      closeDonatePopup();
+    }
+  });
+
   var header = document.querySelector(".site-header");
   var nav = document.querySelector(".nav");
   var menuToggle = document.querySelector(".menu-toggle");

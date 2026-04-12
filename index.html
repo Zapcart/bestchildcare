@@ -34,7 +34,7 @@
           <li><a href="#trust">Trust</a></li>
         </ul>
       </nav>
-      <a href="#donate-money" class="btn btn-header">Donate</a>
+      <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-header donate-trigger">Donate</a>
       <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -49,8 +49,9 @@
         <h1 class="hero-title">Know exactly <em>who</em> you help—and <em>what</em> your gift does</h1>
         <p class="hero-lead">HelpCharityFoundation shows you the real people behind each campaign, why help is urgent, and how donations turn into food, education, shelter, and safety.</p>
         <div class="hero-actions">
-          <a href="#donate-money" class="btn btn-primary btn-lg">Donate now</a>
+          <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary btn-lg donate-trigger">Donate now</a>
           <a href="#campaigns" class="btn btn-outline btn-lg">View campaigns</a>
+          <p class="trust-message">Every rupee you donate goes directly to helping those in need. 🔒 Secure Payment | 100% Safe Donation</p>
         </div>
         <ul class="hero-trust" role="list">
           <li>Safe donations</li>
@@ -79,8 +80,9 @@
             <h2 class="featured-campaign-title">A Father's Hands, A Child's Breath – Purav's Fight for Life</h2>
             <p class="featured-campaign-summary">Master Purav, just 3.5 years old, is fighting for every breath at DMICC Hospital, Jaipur. His father, a daily wage labourer earning ₹12,000/month, has already spent ₹5.5 lakh borrowed from friends. No savings left, no assets to sell – only hope.</p>
             <div class="featured-campaign-actions">
-              <a href="#donate-money" class="btn btn-primary btn-lg">Donate Now</a>
+              <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary btn-lg donate-trigger">Donate Now</a>
               <button type="button" class="btn btn-outline btn-lg" id="btn-know-more">Know More</button>
+              <p class="trust-message">Every rupee you donate goes directly to helping those in need. 🔒 Secure Payment | 100% Safe Donation</p>
             </div>
           </div>
         </div>
@@ -114,8 +116,9 @@
               <li><strong>Impact:</strong> Supports food, education, hygiene, and safety.</li>
             </ul>
             <div class="campaign-actions">
-              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary donate-trigger">Support this cause</a>
               <a href="https://wa.me/?text=Help%20Prasad%20raise%2045%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
+              <p class="trust-message">Every rupee you donate goes directly to helping those in need. 🔒 Secure Payment | 100% Safe Donation</p>
             </div>
           </div>
         </article>
@@ -140,8 +143,9 @@
               <li><strong>Impact:</strong> Provides survival kits and emergency support.</li>
             </ul>
             <div class="campaign-actions">
-              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary donate-trigger">Support this cause</a>
               <a href="https://wa.me/?text=Help%20Prasad%20raise%2045%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
+              <p class="trust-message">Every rupee you donate goes directly to helping those in need. 🔒 Secure Payment | 100% Safe Donation</p>
             </div>
           </div>
         </article>
@@ -165,7 +169,7 @@
               <li><strong>Impact:</strong> Provides meals, school kits, and education support.</li>
             </ul>
             <div class="campaign-actions">
-              <a href="#donate-money" class="btn btn-primary">Support this cause</a>
+              <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary donate-trigger">Support this cause</a>
               <a href="https://wa.me/?text=Food%20%26%20Education%20support%20for%20poor%20children%20-%20Support%20now%20at%20HelpCharityFoundation" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share this campaign</a>
             </div>
           </div>
@@ -459,10 +463,29 @@
     </div>
   </footer>
 
-  <a href="#donate-money" class="sticky-donate" id="sticky-donate">Donate</a>
+  <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="sticky-donate donate-trigger" id="sticky-donate">Donate</a>
 
   <div class="mobile-sticky-bar">
-    <a href="#donate-money" class="btn btn-primary btn-mobile-donate">Donate Now</a>
+    <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary btn-mobile-donate donate-trigger">Donate Now</a>
+  </div>
+
+  <div class="donate-popup" id="donate-popup" aria-hidden="true" role="dialog" aria-labelledby="donate-popup-title">
+    <div class="popup-backdrop" id="popup-backdrop"></div>
+    <div class="popup-content">
+      <div class="popup-body">
+        <div class="popup-icon">❤️</div>
+        <h2 id="donate-popup-title" class="popup-title">You're about to change a life</h2>
+        <p class="popup-message">You are helping a real child fight for life.</p>
+        <div class="popup-trust">
+          <span class="trust-badge-small">🔒 100% Secure Payment</span>
+          <span class="trust-badge-small">Trusted Platform</span>
+        </div>
+        <div class="popup-actions">
+          <a href="https://cosmofeed.com/vp/69db6228da78960013f13e18" target="_blank" class="btn btn-primary btn-lg popup-continue-btn">Continue to Payment</a>
+          <button type="button" class="btn btn-ghost popup-cancel-btn" id="popup-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="campaign-modal" id="campaign-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
@@ -495,7 +518,8 @@
           <p class="appeal-text">"Please help Master Purav fight this battle. One child. One life. One hope."</p>
         </div>
         <div class="modal-actions">
-          <a href="#donate-money" class="btn btn-primary btn-lg modal-donate-btn">Donate Now</a>
+          <a href="#" data-payment-link="https://cosmofeed.com/vp/69db6228da78960013f13e18" class="btn btn-primary btn-lg modal-donate-btn donate-trigger">Donate Now</a>
+          <p class="trust-message">Every rupee you donate goes directly to helping those in need. 🔒 Secure Payment | 100% Safe Donation</p>
         </div>
       </div>
     </div>
