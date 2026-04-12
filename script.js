@@ -135,6 +135,37 @@
     }
   });
 
+  /* Floating donation popup */
+  var floatingPopup = document.getElementById("floating-popup");
+  var floatingReady = document.getElementById("floating-ready");
+  var floatingClose = document.getElementById("floating-close");
+
+  function showFloatingPopup() {
+    if (floatingPopup) {
+      floatingPopup.classList.add("show");
+    }
+  }
+
+  function hideFloatingPopup() {
+    if (floatingPopup) {
+      floatingPopup.classList.remove("show");
+    }
+  }
+
+  // Show popup after 5 seconds
+  setTimeout(showFloatingPopup, 5000);
+
+  if (floatingReady) {
+    floatingReady.addEventListener("click", function () {
+      hideFloatingPopup();
+      openDonatePopup();
+    });
+  }
+
+  if (floatingClose) {
+    floatingClose.addEventListener("click", hideFloatingPopup);
+  }
+
   var header = document.querySelector(".site-header");
   var nav = document.querySelector(".nav");
   var menuToggle = document.querySelector(".menu-toggle");

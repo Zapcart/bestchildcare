@@ -1532,6 +1532,216 @@ a.btn-header:hover {
   border-bottom: 1px solid var(--gray-200);
 }
 
+/* Premium footer */
+.site-footer {
+  background: var(--gray-100);
+  padding: 4rem 24px 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-heading {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin: 0 0 0.5rem;
+}
+
+.footer-subheading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 1rem 0 0.75rem;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--black);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--gray-600);
+  transition: all 0.2s var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-icon:hover {
+  background: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  background: var(--white);
+  transition: border-color 0.2s var(--ease);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--red);
+}
+
+.form-input::placeholder {
+  color: var(--gray-400);
+}
+
+.btn-submit {
+  padding: 0.875rem 2rem;
+  background: #fbbf24;
+  color: var(--black);
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gray-200);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+/* Floating donation popup */
+.floating-donation-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s var(--ease);
+}
+
+.floating-donation-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-popup-content {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  max-width: 320px;
+}
+
+.floating-popup-text {
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.floating-popup-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.floating-btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.floating-btn-primary {
+  background: var(--red);
+  color: var(--white);
+}
+
+.floating-btn-primary:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.floating-btn-secondary {
+  background: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.floating-btn-secondary:hover {
+  background: var(--gray-300);
+}
+
+/* Featured campaign section */
+
 .testimonial-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1998,6 +2208,40 @@ a.btn-header:hover {
 
   .author-name {
     font-size: 1.125rem;
+  }
+
+  .site-footer {
+    padding: 3rem 24px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .floating-donation-popup {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .floating-popup-content {
+    max-width: 280px;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .floating-popup-content {
+    max-width: calc(100vw - 2rem);
   }
 }
 
