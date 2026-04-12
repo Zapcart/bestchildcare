@@ -1525,6 +1525,78 @@ a.btn-header:hover {
   background: var(--gray-100);
 }
 
+/* Testimonial section */
+.section-testimonial {
+  background: var(--white);
+  padding: 4rem 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.testimonial-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial-quote {
+  font-size: 1.125rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+  border-left: 4px solid var(--red);
+  padding-left: 1.5rem;
+}
+
+.testimonial-author {
+  margin-top: 0.5rem;
+}
+
+.author-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+}
+
+.author-title {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  margin: 0.25rem 0 0;
+}
+
+.testimonial-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ceo-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.charity-id {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
 /* Featured campaign section */
 .section-featured-campaign {
   background: var(--white);
@@ -1900,6 +1972,32 @@ a.btn-header:hover {
   .loader-logo-img {
     width: 140px;
     max-width: 70vw;
+  }
+
+  .section-testimonial {
+    padding: 3rem 24px;
+  }
+
+  .testimonial-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-image {
+    order: -1;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+
+  .author-name {
+    font-size: 1.125rem;
   }
 }
 
