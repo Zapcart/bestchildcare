@@ -1252,10 +1252,16 @@ a.btn-header:hover {
   background: var(--gray-900);
 }
 
-.video-wrap video {
+.video-wrap video,
+.video-wrap iframe {
   width: 100%;
   display: block;
   border-radius: 15px;
+}
+
+.video-wrap iframe {
+  min-height: 250px;
+  border-radius: 12px;
 }
 
 /* Trust badges */
@@ -1827,11 +1833,17 @@ a.btn-header:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.featured-campaign-video video {
+.featured-campaign-video video,
+.featured-campaign-video iframe {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 15px;
+}
+
+.featured-campaign-video iframe {
+  min-height: 250px;
+  border-radius: 12px;
 }
 
 .urgent-badge--large {
