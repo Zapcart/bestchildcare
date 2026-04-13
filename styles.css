@@ -1246,7 +1246,7 @@ a.btn-header:hover {
 .video-wrap {
   max-width: 800px;
   margin: 0 auto;
-  border-radius: var(--radius);
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: var(--gray-900);
@@ -1255,7 +1255,7 @@ a.btn-header:hover {
 .video-wrap video {
   width: 100%;
   display: block;
-  border-radius: var(--radius);
+  border-radius: 15px;
 }
 
 /* Trust badges */
@@ -1822,7 +1822,7 @@ a.btn-header:hover {
 
 .featured-campaign-video {
   position: relative;
-  border-radius: var(--radius);
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
@@ -1831,7 +1831,7 @@ a.btn-header:hover {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius);
+  border-radius: 15px;
 }
 
 .urgent-badge--large {
