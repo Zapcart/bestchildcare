@@ -104,6 +104,12 @@
     if (donatePopup) {
       donatePopup.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
+      // Track donation popup open
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'donation_popup_open', {
+          event_category: 'engagement'
+        });
+      }
     }
   }
 
@@ -118,6 +124,13 @@
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
       openDonatePopup();
+      // Track donate button click
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'donate_click', {
+          event_category: 'engagement',
+          event_label: 'donate_button'
+        });
+      }
     });
   });
 
@@ -127,6 +140,18 @@
 
   if (popupBackdrop) {
     popupBackdrop.addEventListener("click", closeDonatePopup);
+  }
+
+  if (popupContinueBtn) {
+    popupContinueBtn.addEventListener("click", function() {
+      closeDonatePopup();
+      // Track payment redirect
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'payment_redirect', {
+          event_category: 'conversion'
+        });
+      }
+    });
   }
 
   document.addEventListener("keydown", function (e) {
@@ -357,6 +382,12 @@
       setTimeout(function () {
         btn.textContent = "Add";
       }, 1200);
+      // Track add to cart
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'add_to_cart', {
+          event_category: 'ecommerce'
+        });
+      }
     });
   });
 
@@ -433,6 +464,33 @@
   }
 
   selectPreset(501);
+
+  // Track contact form submission
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          event_category: 'lead'
+        });
+      }
+    });
+  }
+
+  // Track page scroll (50%)
+  var scrollTracked = false;
+  window.addEventListener('scroll', function() {
+    if (scrollTracked) return;
+    var scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    if (scrollPercent > 50) {
+      scrollTracked = true;
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'scroll_50', {
+          event_category: 'engagement'
+        });
+      }
+    }
+  });
 
   if (donateMoneyBtn) {
     donateMoneyBtn.addEventListener("click", function () {

@@ -4,12 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Thank You for Your Donation - HelpCharityFoundation</title>
-  <meta name="description" content="Thank you for your generous donation to HelpCharityFoundation. Your contribution will make a real impact in someone's life.">
+  <title>Thank You for Your Donation | HelpCharityFoundation India</title>
+  <meta name="description" content="Thank you for your generous charity donation to HelpCharityFoundation India. Your contribution will make a real impact in helping poor children.">
+  <meta name="keywords" content="thank you donation India, charity donation confirmation, NGO donation receipt, donate online confirmation">
+  <meta name="robots" content="noindex, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-31N610TLTN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-31N610TLTN', {
+      page_path: window.location.pathname
+    });
+  </script>
   <style>
     .thankyou-page {
       min-height: 100vh;
@@ -144,5 +157,15 @@
       </div>
     </div>
   </div>
+  <script>
+    // Track purchase complete event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'purchase_complete', {
+        event_category: 'conversion',
+        value: 399,
+        currency: 'INR'
+      });
+    }
+  </script>
 </body>
 </html>
