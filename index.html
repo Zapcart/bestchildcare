@@ -412,6 +412,26 @@
               <button type="button" class="btn btn-primary btn-block add-to-cart">Add</button>
             </article>
           </div>
+
+          <div class="cart-panel">
+            <div class="cart-header">
+              <h3>Your Cart</h3>
+            </div>
+            <div id="cart-empty" class="cart-empty">
+              <p>Your cart is empty. Add products to continue.</p>
+            </div>
+            <ul id="cart-lines" class="cart-lines" hidden></ul>
+            <div id="cart-footer" class="cart-footer" hidden>
+              <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+              </div>
+              <div class="cart-actions">
+                <button type="button" id="cart-clear" class="btn btn-outline">Clear Cart</button>
+                <button type="button" id="cart-checkout" class="btn btn-primary">Proceed to Payment</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

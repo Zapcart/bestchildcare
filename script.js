@@ -407,11 +407,7 @@
         window.alert("Your cart is empty. Add a kit to continue.");
         return;
       }
-      window.alert(
-        "Thank you. Kits total " +
-          formatRupee(t) +
-          ". Connect your payment or logistics provider here to complete checkout."
-      );
+      window.location.href = "https://cosmofeed.com/vp/69db6228da78960013f13e18?amount=" + t;
     });
   }
 
