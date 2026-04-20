@@ -990,48 +990,96 @@ a.btn-header:hover {
   opacity: 0.65;
 }
 
-/* Trust */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+/* Trust - Donor Activity */
+.donor-activity-container {
   margin-bottom: 2.5rem;
 }
 
-.stat-card {
+.donor-activity-wrapper {
+  position: relative;
   background: var(--white);
-  padding: 1.75rem;
   border-radius: var(--radius);
-  border: 1px solid rgba(196, 30, 58, 0.15);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s var(--ease);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-height: 180px;
 }
 
-.stat-card:hover {
-  transform: translateY(-4px);
+.donor-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
-.stat-label {
+.donor-card.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.donor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.donor-badge {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--red);
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+}
+
+.donor-badge-top {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.donor-badge-recent {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+.donor-badge-first {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.verified-icon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.donor-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+
+.donor-amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #10b981;
   margin: 0 0 0.5rem;
 }
 
-.stat-name {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 0 0 0.35rem;
-  color: var(--black);
-}
-
-.stat-meta {
-  margin: 0;
+.donor-location,
+.donor-time {
   font-size: 0.9375rem;
-  color: var(--gray-700);
+  color: #64748b;
+  margin: 0;
 }
 
 .trust-pills {

@@ -505,4 +505,25 @@
       );
     });
   }
+
+  // Donor Activity Card Rotation
+  var donorCards = document.querySelectorAll(".donor-card");
+  if (donorCards.length > 0) {
+    var currentIndex = 0;
+    var rotationInterval = 5000; // 5 seconds
+
+    function rotateDonorCards() {
+      donorCards.forEach(function (card) {
+        card.classList.remove("active");
+      });
+      donorCards[currentIndex].classList.add("active");
+      currentIndex = (currentIndex + 1) % donorCards.length;
+    }
+
+    // Initialize first card
+    rotateDonorCards();
+
+    // Set up rotation interval
+    setInterval(rotateDonorCards, rotationInterval);
+  }
 })();
