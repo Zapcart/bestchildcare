@@ -1314,6 +1314,61 @@ a.btn-header:hover {
   transform: scale(0.98);
 }
 
+.btn-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gray-900);
+  color: var(--white);
+  border-color: var(--gray-900);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s;
+}
+
+.btn-share:hover {
+  background: var(--black);
+  border-color: var(--black);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-share:active {
+  transform: scale(0.98);
+}
+
+.share-platforms {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.share-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--gray-100);
+  color: var(--gray-700);
+  transition: all 0.2s var(--ease);
+}
+
+.share-link:hover {
+  background: var(--gray-200);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.share-link:active {
+  transform: scale(0.95);
+}
+
 /* Video section */
 .section-video {
   background: var(--gray-100);

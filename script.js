@@ -526,4 +526,19 @@
     // Set up rotation interval
     setInterval(rotateDonorCards, rotationInterval);
   }
+
+  // Share Campaign Function
+  window.shareCampaign = function() {
+    var shareData = {
+      title: "HelpCharityFoundation",
+      text: "🙏 Support this urgent case and save a life",
+      url: "https://helpcharityfoundation.in"
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData);
+    } else {
+      alert("Sharing not supported on this device. Please use the platform icons below.");
+    }
+  };
 })();
