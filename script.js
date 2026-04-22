@@ -126,8 +126,8 @@
       openDonatePopup();
       // Track donate button click
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'donate_click', {
-          event_category: 'engagement',
+        gtag('event', 'click', {
+          event_category: 'button',
           event_label: 'donate_button'
         });
       }
@@ -384,8 +384,9 @@
       }, 1200);
       // Track add to cart
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'add_to_cart', {
-          event_category: 'ecommerce'
+        gtag('event', 'click', {
+          event_category: 'button',
+          event_label: 'add_to_cart_button'
         });
       }
     });
@@ -529,6 +530,14 @@
 
   // Share Campaign Function
   window.shareCampaign = function() {
+    // Track share button click
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'click', {
+        event_category: 'button',
+        event_label: 'share_button'
+      });
+    }
+
     var shareData = {
       title: "HelpCharityFoundation",
       text: "🙏 Support this urgent case and save a life",
